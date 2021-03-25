@@ -4,66 +4,8 @@
     <title>W3.CSS</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <style>
-        html, body {
-        height: 100%;
-        }
-        body{
-            background-image: url("bg.gif");
-            background-position: center;
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-        }
-        iframe{
-            resize: both;
-            overflow: auto;
-            border:2px dashed black;
-            width:100%;
-            min-height:500px;
-            background-color: white;
-            display: none;
-        }
-        #main{
-            background-color:black;
-            opacity:0.9;
-            height:100%;
-            overflow: auto;
-        }
-        #welcome, #about{
-           position: relative;
-           color:yellowgreen;
-           background-color:transparent !important;
-        }
-        p{
-          color:#fff;
-        }
-        #codebox{
-          background-color:rgb(18, 18, 68);
-          display: block;
-        }
-        p code{
-          color:rgb(146, 41, 41);
-        }
-        .button {
-          background-color: #4CAF50; /* Green */
-          border: none;
-          color: white;
-          padding: 15px 32px;
-          text-align: center;
-          text-decoration: none;
-          display: inline-block;
-          font-size: 16px;
-          margin: 4px 2px;
-          cursor: pointer;
-          -webkit-transition-duration: 0.4s; /* Safari */
-          transition-duration: 0.4s;
-        }
+    <link rel="stylesheet" href="codershowcase.css">
 
-        .button1 {
-          box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-        }
-    </style>
 </head>
 <body>
 
@@ -79,11 +21,12 @@
   <div class="w3-container">
     <h1 id="title">My Page</h1>
   </div>
+  
+<button id="git" class="button1 shadow" onclick="git()">See on Github</button>
 </div>
 
 <!--<img src="bceac8633ddcfada2291229ec1c6fcc7.gif" alt="Car" style="width:100%">-->
 <iframe id="iframe" src="" frameborder="0"></iframe>
-<button class="button button1" onclick="repo()">See on Github</button>
 
 <div id="welcome" class="w3-container">
     <h1>Welcome to Coder Showcase for Github!</h1>
@@ -91,7 +34,7 @@
     <p>Please feel free to check any of them on the left side menu.</p>
     <h5>(Content of this page is automatically created by Coder Showcase App.)</h5>
     <br>
-    <button class="button button1" onclick="about()">About Showcase</button>
+    <a class="button shadow" onclick="about()" href="#about">About Showcase</a>
 </div>
 
 <div id="about" class="w3-container" hidden>
