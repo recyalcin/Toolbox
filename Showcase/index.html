@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>W3.CSS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+        html, body {
+        height: 100%;
+        }
+        body{
+            background-image: url("bg.gif");
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+        iframe{
+            resize: both;
+            overflow: auto;
+            border:2px dashed black;
+            width:100%;
+            min-height:500px;
+            background-color: white;
+            display: none;
+        }
+        #main{
+            background-color:black;
+            opacity:0.9;
+            height:100%;
+            overflow: auto;
+        }
+        #welcome, #about{
+           position: relative;
+           color:yellowgreen;
+           background-color:transparent !important;
+        }
+        p{
+          color:#fff;
+        }
+        #codebox{
+          background-color:rgb(18, 18, 68);
+          display: block;
+        }
+        p code{
+          color:rgb(146, 41, 41);
+        }
+        .button {
+          background-color: #4CAF50; /* Green */
+          border: none;
+          color: white;
+          padding: 15px 32px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 16px;
+          margin: 4px 2px;
+          cursor: pointer;
+          -webkit-transition-duration: 0.4s; /* Safari */
+          transition-duration: 0.4s;
+        }
+
+        .button1 {
+          box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+        }
+    </style>
+</head>
+<body>
+
+<div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none" id="mySidebar">
+  <button class="w3-bar-item w3-button w3-large"
+  onclick="w3_close()">Close &times;</button>
+</div>
+
+<div id="main">
+
+<div class="w3-teal" >
+  <button id="openNav" class="w3-button w3-teal w3-xlarge" onclick="w3_open()">&#9776;</button>
+  <div class="w3-container">
+    <h1 id="title">My Page</h1>
+  </div>
+</div>
+
+<!--<img src="bceac8633ddcfada2291229ec1c6fcc7.gif" alt="Car" style="width:100%">-->
+<iframe id="iframe" src="" frameborder="0"></iframe>
+<button class="button button1" onclick="repo()">See on Github</button>
+
+<div id="welcome" class="w3-container">
+    <h1>Welcome to Coder Showcase for Github!</h1>
+    <p>Here is a showcase for my Github Projects.</p>
+    <p>Please feel free to check any of them on the left side menu.</p>
+    <h5>(Content of this page is automatically created by Coder Showcase App.)</h5>
+    <br>
+    <button class="button button1" onclick="about()">About Showcase</button>
+</div>
+
+<div id="about" class="w3-container" hidden>
+    <h1>"Coder Showcase" App : </h1>
+    <p>Showcase makes navigation of Github repos easier.</p>
+    <p>This interface pulls repos or subfolders of a repo defined by a Github user, and shows them as instantly navigable tabs.</p>
+    <p>So, you can use Showcase to show your projects under Github to your potential customers or to the company you want to apply.</p>
+    <h1>Usage : </h1>
+    <p>Just pass your Github username and name of the repo you want in showcase and navigate to the url below.</p>
+    
+    <h1>Example :</h1>
+    <div id="codebox">
+      <code> https://c7197-recep.github.io/Toolbox/index.html?user=C7197-Recep&repo=Clarusway</code>
+    </div>
+    <h1>Parameters :</h1>
+    <p>Defining the user : <code>user=GithubUsername</code></p>
+    <p>For all repos : <code>repo=all</code></p>
+    <p>For subfolder of a repo : <code>repo=TheRepoName</code>  </p>
+    <p>To See All Files : <code>showfiles=true</code> </p>
+</div>
+
+</div>
+
+<div id="info" class="github-widget" data-user="C7197-Recep" data-repo="Clarusway"></div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="codershowcase.js"></script>
+
+<script>
+function w3_open() {
+  document.getElementById("main").style.marginLeft = "25%";
+  document.getElementById("mySidebar").style.width = "25%";
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("openNav").style.display = 'none';
+}
+function w3_close() {
+  document.getElementById("main").style.marginLeft = "0%";
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("openNav").style.display = "inline-block";
+}
+function about(){
+  document.getElementById("about").style.display="block";
+}
+w3_open();
+</script>
+
+</body>
+</html>
