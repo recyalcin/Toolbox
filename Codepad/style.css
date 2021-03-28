@@ -1,0 +1,63 @@
+
+nav{
+    width:100%;
+    background: #047517a1;
+    color:white;
+    /* clip-path: polygon(50% 0px, 44.73% 15.00%, 0.51% 153.33%, 5px 1.67%); */
+
+}
+
+nav h2{
+    padding:30px;
+    text-align:center;
+}
+
+.input{
+    border:1px solid black;
+   
+}
+
+.output{
+    border:1px solid black;
+}
+
+[contenteditable]:focus {
+    outline: 0px solid transparent;
+}
+
+.code-content{
+    overflow:auto;
+}
+
+/*BUNU BEN EKLEDIM*/
+.CodeMirror {
+    font-size: 14px;
+    height:500px !important;
+}
+
+iframe
+{
+    border: 1px solid #404040;
+    min-height: 500px;
+    width: 100%;
+    font-family: 'Courier New';
+    font-size: 12px;
+}
+
+.btn-run {
+    padding: 8px;
+    background-color: #22aadd;
+    border: none;
+    color: #FFFFFF;
+    border-radius: 2px;
+    transition: all 0.3s;
+}
+
+.row{
+    resize: both;
+}
+
+#debug{
+    background-color: black;
+    font-size:14px;
+}

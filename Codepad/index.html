@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodePad for Github</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css"/>
+    
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"/>
+    <!-- jQuery library -->
+    <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Popper JS -->
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script defer src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+    <!--CODEMIRROR-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.48.0/codemirror.css" rel="stylesheet">
+    <!--CODEMIRROR THEMES-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.48.0/theme/idea.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.52.2/theme/monokai.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.60.0/theme/yonce.min.css" integrity="sha512-34KvyN6vsoyrDzJucLXCwu8HSKGPlOffTJT2nyOGCmuXRjawuG8Uo5qE1+vDsnQ+RqDKE6FYWeUEDcpY0bFiPQ==" crossorigin="anonymous" />
+    <!--CODEMIRROR PLUGINS-LIBS-->
+    <script src="https://cdn.staticfile.org/codemirror/5.48.0/codemirror.js"></script>
+    <script src="https://cdn.staticfile.org/codemirror/5.48.0/addon/edit/closebrackets.min.js"></script>
+    <script src="https://cdn.staticfile.org/codemirror/5.48.0/addon/edit/closetag.min.js"></script>
+    <script src="https://cdn.staticfile.org/codemirror/5.48.0/mode/javascript/javascript.min.js"></script>
+    <script src="https://cdn.staticfile.org/codemirror/5.48.0/mode/css/css.min.js"></script>
+    <script src="https://cdn.staticfile.org/codemirror/5.48.0/mode/xml/xml.min.js"></script>
+    <script src="https://cdn.staticfile.org/codemirror/5.48.0/mode/htmlmixed/htmlmixed.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/htmlhint@latest/dist/htmlhint.js"></script>
+    <!-- If you need csslint and jshint -->
+    <script src="https://cdn.jsdelivr.net/npm/jshint@2.10.1/dist/jshint.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/csslint@1.0.5/dist/csslint.js"></script>
+
+    <script src="https://codemirror.net/addon/lint/lint.js"></script>
+    <script src="https://codemirror.net/addon/lint/javascript-lint.js"></script>
+
+    <script defer src="app.js"></script> 
+</head>
+<body>
+<header>
+    <nav>       
+        <h2>CodePad for Github</h2>
+    </nav>
+</header>
+<main>
+    <h4>User : <span id="user">User</span></h4> 
+    <h4>Repo : <span id="repo">Repo</span>
+    <div class="jumbotron">
+        <div class="row">
+            <div class="col-md-6 input">
+                <h4>Write your Code :<input onclick="runCode();" class="btn-run" type="button" value="Run Code" style="float:right;"></h4>
+                <hr>
+                <div class="code-content" id="code-input" contenteditable="true" autofocus>
+                </div>
+            </div>
+            <div class="col-md-6 output">
+				<h4>Output :<span style="color:green;">Running</span></h4>
+                <hr>
+                <iframe class="code-content" id="code-output" contenteditable="true"></iframe>    
+          </div>
+        </div>
+        <div id="debug"></div>
+    </div>
+
+</main>
+
+</body>
+</html>
+
